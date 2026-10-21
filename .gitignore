@@ -1,0 +1,17 @@
+# Specs and plans stay local
+docs/
+
+# Secrets and local tool state
+.env
+.env.*
+.n8n/
+
+# Python
+.venv/
+__pycache__/
+
+# OS / editor
+.DS_Store
+.vscode/*
+.idea/
+*.log
