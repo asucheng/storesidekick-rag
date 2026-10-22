@@ -17,9 +17,10 @@
         "authentication": "none",
         "options": {
           "responseMode": "lastNode",
-          "title": "Wag & Whisker help",
+          "title": "Wag and Whisker help",
           "subtitle": "Answers from the store handbook"
-        }
+        },
+        "initialMessages": "Hi! I answer questions using the Wag and Whisker store handbook: products, shipping, returns, warranty and Pack Points."
       }
     },
     {
