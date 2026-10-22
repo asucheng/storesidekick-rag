@@ -70,6 +70,8 @@ In my runs there were **no retrieval failures**. The right chunk was always in t
 
   I added two held-out questions *before* this change to check it generalizes. **Result: 12/13.** P1 now names the right toy and size with no other products, but it adds "should hold up well for your dog", a durability promise the handbook doesn't make (the dog "shreds everything", the toy is rated 3 Strong, and the handbook says no toy is indestructible). I graded that a fail: any claim not backed by the handbook breaks the grounding rule.
 
+- **Change 3, prompt (run 4, after the Stage 2 review):** one more rule against promises or judgements the handbook doesn't state. It fixed M1 (4/4 runs), but P1 **regressed** (4/4 runs). The durability promise went away, but the bot started recommending the rating-4 rubber Ultra Chew Ring as a "rope toy" again. The new rule ("if the user's needs go beyond a product's rating, say so") pulled against rule 7 ("only recommend what was asked"), and the model resolved the conflict by recommending the other product. I kept prompt v2 live and recorded v3 as tested. Lesson: prompt rules interact, so every prompt change needs the full regression set plus repeats, and a reliable fix for P1 probably needs a code-level check rather than another rule.
+
 Full tables: [`eval/results.md`](eval/results.md).
 
 **What I learned:** each change only fixed its own kind of error. Better chunks gave the model better evidence, but couldn't stop it guessing what "it" meant. A better prompt changed what it did with the evidence, but couldn't put a missing product name back into a chunk.

@@ -134,3 +134,27 @@ Recorded after the final review, with the runner now saving every turn: [`runs/h
 **Final config, all 14 cases:** 12/14 answers correct. Memory behaviour correct in both multi-turn cases. Remaining failures, by severity:
 - **P1 (high):** invented durability promise. This is the next fix: a prompt rule against claims beyond the handbook, and possibly a code check.
 - **M1 (low):** unasked product suggestion. A prompt rule only reduces this; a reliable fix needs a code check that compares recommended products with what was asked.
+
+## Run 4 — `hdr-v1` + prompt v3 (one focused change for P1) — 2026-10-22
+
+**Why:** the Stage 2 review suggested one focused prompt change for P1's unsupported durability claim, then a re-test.
+
+**Change (prompt only):** one rule was added to prompt v2, again worded generally:
+
+> 8. Do not add promises, guarantees or judgements the handbook does not state, such as how long a product will last or whether it will suit a particular pet. If what the user describes goes beyond what a product is rated or recommended for, say so plainly using the handbook's own wording.
+
+All 14 cases were re-run ([`runs/hdr-v1-prompt3.json`](runs/hdr-v1-prompt3.json)). P1 and M1 were then repeated 3 more times to check whether the results were stable or run-to-run noise ([`runs/hdr-v1-prompt3-repeat*`](runs/)).
+
+| ID | Run 3 (v2) | Run 4 (v3) | Repeats (v3) | Notes |
+| --- | --- | --- | --- | --- |
+| P1 | ❌ "should hold up well" (high) | ❌ **regressed** | 3/3 same | The durability promise is gone, but the Ultra Chew Ring (rubber, rating 4) is back, listed under "rope toys", with "Both options are suitable for strong chewers like your dog". Still high severity: a rubber toy is presented as a rope toy, plus a suitability judgement. |
+| M1 | ❌ unasked $5 product (low) | ✅ | 3/3 pass | "$24" in both turns; no unasked product. |
+| Other 12 | ✅ | ✅ | — | No change. |
+
+**Score:** 13/14 with prompt v3 (12/14 with v2). But the one remaining failure, P1, is the high-severity one, and it got a different failure rather than a fix.
+
+**Why it regressed (most likely):** rule 8 tells the bot to act when a user's needs go beyond a product's rating. The bot recognised that a dog that "shreds everything" fits rating 4, but resolved it by *recommending* the rating-4 product instead of *stating* that the rope toy is only rated 3. That breaks rule 7 ("only recommend products that match what was asked"). The two rules pulled in opposite directions, and the model resolved the conflict the wrong way. The 3/3 repeats show this is caused by the prompt, not by chance.
+
+**Decision:** prompt v2 stays live (it's what `workflows/chat.json` contains). v3 is recorded here so the test can be reproduced. Neither prompt fixes P1. Adding one rule per failure risks rules that conflict, as happened here. A reliable fix likely needs either one combined rule written with the conflict in mind, or a code check after the model answers (e.g. block any recommended product that doesn't match the requested type, and any sentence that predicts durability). That's left as the next step beyond Stage 2.
+
+**Lesson:** prompt rules interact. Every prompt change needs the full regression set, plus repeats on the cases it touches. A single run of only the targeted case would have missed this regression.
