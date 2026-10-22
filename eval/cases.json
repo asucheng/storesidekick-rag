@@ -63,6 +63,15 @@
     "evidence": "§4 Ordering (order changes)"
   },
   {
+    "id": "P5",
+    "type": "paraphrase",
+    "turns": [
+      "Which of your balls will float in a lake?"
+    ],
+    "expected": "Bounce Buddy Ball (WW-D-103), which floats. Recommends only balls; no other product types.",
+    "evidence": "§3 WW-D-103 (held out for run 3)"
+  },
+  {
     "id": "A1",
     "type": "ambiguous",
     "turns": [
@@ -70,6 +79,15 @@
     ],
     "expected": "Asks what 'it' means, or briefly covers the main timeframes (processing/delivery, refunds) without inventing.",
     "evidence": "§5 / §6"
+  },
+  {
+    "id": "A2",
+    "type": "ambiguous",
+    "turns": [
+      "Is it machine washable?"
+    ],
+    "expected": "Asks which product 'it' refers to. Doesn't pick a product or guess.",
+    "evidence": "none (held out for run 3)"
   },
   {
     "id": "U1",

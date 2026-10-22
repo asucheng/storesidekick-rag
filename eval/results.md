@@ -79,3 +79,44 @@ The first attempt at D1–D3 reached n8n before the updated workflow had loaded,
 - **A1** is an agent error: it narrows "how long does it take?" to shipping before searching. The fix would be the prompt's ambiguity rule ("if it's unclear what 'it' means, ask before searching").
 
 Both are deliberately left for a separate change, so this comparison measures only the retrieval change.
+
+## Run 3 — `hdr-v1` + prompt v2 (generation/agent fix) — 2026-10-21
+
+**Change (prompt only):** same chunks and namespace as run 2. Two rules in the system prompt were written generally, naming no product or topic from the test:
+- **Rule 5 (was: "ask or answer each meaning"):** if it's unclear what the user means ("it" or "that" with nothing earlier to refer to, or a question that fits several topics or products), don't search and don't guess; ask one short clarifying question first.
+- **New rule 7:** only recommend products that match what was asked for (kind of product, animal, size or other requirement). Don't add products of a different kind. Say so if nothing matches.
+
+**Held-out cases:** P5 and A2 were added *before* the prompt change, to check the rules generalize beyond the two cases they target. Their baseline on the run 2 prompt is in [`runs/hdr-v1-A2-P5.json`](runs/hdr-v1-A2-P5.json): P5 passed, and A2 failed the same way as A1 (it picked three products instead of asking, and missed the machine-washable Tug Titan).
+
+| ID | Type | Retrieval OK | Answer OK | Citation OK | Refused / clarified | Memory OK | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| D1 | direct | Y | Y | Y | n.a. | n.a. | |
+| D2 | direct | Y | Y | Y | n.a. | n.a. | |
+| D3 | direct | Y | Y | Y | n.a. | n.a. | |
+| P1 | paraphrase | Y | **Y** (was N) | Y | n.a. | n.a. | Only the Tug Titan Rope: XL for dogs over 30 kg, $26. No other product types. |
+| P2 | paraphrase | Y | Y | Y | n.a. | n.a. | |
+| P3 | paraphrase | Y | Y | Y | n.a. | n.a. | |
+| P4 | paraphrase | Y | Y | Y | n.a. | n.a. | |
+| P5 | paraphrase (held out) | Y | Y | Y | n.a. | n.a. | Only the Bounce Buddy Ball. |
+| A1 | ambiguous | n.a. | **Y** (was N) | n.a. | clarified | n.a. | "Are you referring to shipping times, order processing, or something else?" No search before asking. |
+| A2 | ambiguous (held out) | n.a. | **Y** (was N in baseline) | n.a. | clarified | n.a. | "Could you please clarify which product you are referring to?" |
+| U1 | unanswerable | n.a. | Y | n.a. | refused | n.a. | |
+| U2 | unanswerable | n.a. | Y | n.a. | refused | n.a. | |
+| F1 | follow-up | n.a. | Y | Y | n.a. | Y | **No over-triggering:** "it" refers to the earlier message, so the bot answered directly instead of asking. |
+
+**Score:** 13/13 answers correct; all citations correct; no regressions.
+
+## Summary across runs
+
+| | Run 1 | Run 2 (retrieval fix) | Run 3 (prompt fix) |
+| --- | --- | --- | --- |
+| Change | baseline, chunk 800 / overlap 150 | heading-aware chunks | stricter ambiguity rule + "recommend only what was asked" |
+| Answers correct (original 11 cases) | 9 / 11 | 9 / 11 | **11 / 11** |
+| Citations correct | 7 / 9 | 9 / 9 | 9 / 9 |
+| Held-out cases (P5, A2) | — | 1 / 2 (baseline) | **2 / 2** |
+
+Each change fixed the kind of error it targeted. The **retrieval** change fixed attribution: wrong citations, and facts separated from their product. The **prompt** change fixed the **generation** error (an off-question product suggestion) and the **agent** error (guessing what a vague question meant). Neither change could have fixed the other's errors.
+
+**Limits of this evidence:**
+- Each case was run once (temperature 0), and the set is small (13 cases), so 13/13 shows the rules work on these questions, not that the bot is reliable in general.
+- The two held-out cases are the main guard against tuning to the test. A larger held-out set would be the next step.
