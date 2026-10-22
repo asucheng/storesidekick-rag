@@ -100,7 +100,7 @@
         "topK": 4,
         "includeDocumentMetadata": true,
         "options": {
-          "pineconeNamespace": "c800-o150"
+          "pineconeNamespace": "hdr-v1"
         }
       },
       "credentials": {
@@ -190,5 +190,6 @@
   },
   "settings": {
     "executionOrder": "v1"
-  }
+  },
+  "id": "KoduS83CLO5K2mBD"
 }

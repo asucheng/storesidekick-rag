@@ -1,0 +1,38 @@
+[
+  {
+    "id": "P3",
+    "type": "paraphrase",
+    "question": "Which bone is for dogs that wreck everything?",
+    "answer": "The Iron Jaw Bone is designed for dogs that destroy most toys. It's part of the Built Tough line, made from dense natural rubber with extra-thick walls, and has a chew rating of 4 Power. It's available in Medium and Large sizes for dogs weighing 15–45 kg, priced at $24. Additionally, it comes with a Built Tough Guarantee, allowing for a free replacement if your dog destroys it within 90 days of delivery. (Source: Sections 1, 7)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "bone for dogs that wreck everything"
+      }
+    ],
+    "retrieved": [
+      "• Size guidance: match the ball size to your dog's mouth; the ball should be too large to\nfit fully inside the mouth\nIron Jaw Bone (WW-D-104)\nPart of our Built Tough line, the Iron Jaw Bone is moulded from our densest natural rubber\nwith extra-thick walls. It's designed for dogs that have destroyed everything else.\n• Materials: dense natural rubber\n• Sizes: Medium, Large\n• Price: $24\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs 15–45 kg\nSnuffle Mat Meadow (WW-D-105)\nAn enrichment mat with strips of soft felt that look like a small meadow. Scatter kibble or\ntreats into the strips and let your dog sniff them out. Great for slowing down fast eaters and\nfor rainy days indoors.\n• Materials: felt on a non-slip base\n• Size: one size\n• Price: $32\n• Chew rating: 1 Gentle",
+      "plays:\n• 1 Gentle: for licking, carrying and soft mouthing. Ideal for older dogs, gentle players\nand enrichment toys.\n• 2 Moderate: for light chewing and tugging. Most dogs who play nicely fall here.\n• 3 Strong: for determined chewers who work at a toy until something gives.\n• 4 Power: our \"Built Tough\" line, for dogs that destroy most toys. These toys use our\ndensest rubber and thickest walls.\nCat and small-pet toys don't carry chew ratings, because cats and small pets play in very\ndifferent ways. Instead, each product lists the animals and ages it suits.\nSupervision\nNo toy is indestructible. Always supervise play, check toys regularly, and replace any toy that\nshows cracks, loose threads, missing pieces or deep tooth marks. Remove a toy straight away\nif a piece comes off.",
+      "to your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items\nIf an item arrives damaged or turns out to be defective, report it within 7 days of delivery\nand include a photo of the problem. We'll send a free replacement or give you a full refund,\nwhichever you prefer.\nThe Built Tough Guarantee\nProducts with chew rating 4, the Iron Jaw Bone and the Ultra Chew Ring, carry our Built\nTough Guarantee. If your dog destroys one within 90 days of delivery, we'll replace it free of\ncharge. The guarantee covers one replacement per product.\n8. Recalls and Safety Notices",
+      "organic cotton with knotted ends that give dogs a firm grip for tug-of-war. The tight braid\nalso works like dental floss as dogs chew.\n• Materials: double-braided organic cotton\n• Sizes and prices: Medium $18, Large $22, Extra Large (XL) $26\n• Chew rating: 3 Strong\n• Size guidance: choose XL for dogs over 30 kg\n• Care: machine-wash cold and air dry\nTwisty Rope Ring (WW-D-102)"
+    ]
+  },
+  {
+    "id": "P4",
+    "type": "paraphrase",
+    "question": "I ordered something this morning. Can I still cancel it?",
+    "answer": "You can cancel your order within 2 hours of placing it. If it's been longer than that, the order is already packed and cannot be changed. To request a cancellation, please email us with your order number as soon as possible. (Source: Section 4)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "cancel order policy"
+      }
+    ],
+    "retrieved": [
+      "email straight away, and a second email with tracking details when your parcel ships.\nPayment methods\nWe accept Visa, Mastercard, American Express, PayPal and Apple Pay. Payment is taken\nwhen you place your order.\nCurrency\nAll prices and charges are in US dollars only, including orders shipped outside the United\nStates. If your card is in another currency, your bank will convert the amount at its own rate.\nChanging or cancelling an order\nAn order can be changed or cancelled within 2 hours of being placed. Changes include\nswitching a size, adding or removing items, or correcting the delivery address. After 2 hours,\nthe order is packed and can't be changed. To request a change, email us with your order\nnumber as soon as possible.\n5. Shipping",
+      "open an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order\nnumber and we'll check its progress with the carrier for you.\nIncorrect addresses\nPlease double-check your delivery address at checkout. If you spot a mistake, the address can\nbe corrected only while the order can still be changed (see Section 4). Once a parcel has\nshipped, we can't redirect it.\n6. Returns and Exchanges\nWe want every toy to be the right fit. If something isn't right, here's how returns and\nexchanges work.\nReturn window\nYou can return unused items in their original packaging within 30 days of delivery.",
+      "Exchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return\nWhen your return arrives, our warehouse team checks that the item is unused and in its\noriginal packaging. If everything is in order, we process the refund (see the timing above)\nand send you a confirmation email. If an item doesn't meet the return conditions, we'll email\nyou to explain and send the item back to you at no charge.\nItems bought with Pack Points\nIf you return an item from an order where you redeemed Pack Points, the points are returned\nto your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items",
+      "Used toys\nFor hygiene reasons, toys that have been used or played with can't be returned unless they\nare defective. If a toy is defective, see Section 7.\nHow to start a return\nStart a return from the link in your order email. Choose the items you're returning, then print\nthe return label and attach it to the parcel.\nReturn shipping cost\nA $6 return label fee is deducted from your refund, unless the item is defective.\nRefunds\nRefunds are issued to your original payment method within 5 business days after the return\narrives at our warehouse. Your bank may take a few extra days to show the refund.\nExchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return"
+    ]
+  }
+]

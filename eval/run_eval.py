@@ -66,9 +66,11 @@ def retrieved(response: dict) -> list[dict]:
     return chunks
 
 
-def run(config: str) -> None:
+def run(config: str, ids: set[str] | None = None) -> None:
     results = []
     for case in CASES:
+        if ids and case["id"] not in ids:
+            continue
         session = f"eval-{config}-{case['id']}-{int(time.time())}"
         response = {}
         for turn in case["turns"]:
@@ -85,7 +87,7 @@ def run(config: str) -> None:
             "retrieved": [c.get("pageContent", "") for c in chunks],
         })
         print(f"{case['id']}: tool_called={bool(steps)} chunks={len(chunks)}")
-    out = HERE / "runs" / f"{config}.json"
+    out = HERE / "runs" / (f"{config}.json" if not ids else f"{config}-{'-'.join(sorted(ids))}.json")
     out.parent.mkdir(exist_ok=True)
     out.write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("wrote", out)
@@ -95,11 +97,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--questions", action="store_true")
     parser.add_argument("--run", metavar="CONFIG")
+    parser.add_argument("--ids", help="comma-separated case ids to run (default: all)")
     args = parser.parse_args()
     if args.questions:
         write_questions()
     if args.run:
-        run(args.run)
+        run(args.run, set(args.ids.split(",")) if args.ids else None)
 
 
 if __name__ == "__main__":
