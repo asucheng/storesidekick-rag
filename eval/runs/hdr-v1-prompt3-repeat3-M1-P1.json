@@ -1,0 +1,77 @@
+[
+  {
+    "id": "P1",
+    "type": "paraphrase",
+    "question": "My dog weighs 35 kilos and shreds everything. Which rope toy should I buy?",
+    "answer": "For your 35-kilo dog that shreds everything, I recommend the following rope toys:\n\n1. **Tug Titan Rope (WW-D-101)**: \n   - Made from thick, double-braided organic cotton.\n   - Size: Extra Large (XL) recommended for dogs over 30 kg.\n   - Chew rating: 3 Strong.\n   - Price: $26.\n\n2. **Ultra Chew Ring (WW-D-109)**:\n   - Made from reinforced natural rubber.\n   - Size: Large.\n   - Chew rating: 4 Power (Built Tough), suitable for strong chewers.\n   - Price: $28.\n\nBoth options are designed for larger dogs and have higher chew ratings suitable for determined chewers. (Source: Section 3)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "rope toy for large dogs"
+      }
+    ],
+    "retrieved": [
+      "Section 3. Product Catalogue > Tug Titan Rope (WW-D-101)\nThe Tug Titan is the toy that started Wag & Whisker. It is made from thick, double-braided\norganic cotton with knotted ends that give dogs a firm grip for tug-of-war. The tight braid\nalso works like dental floss as dogs chew.\n• Materials: double-braided organic cotton\n• Sizes and prices: Medium $18, Large $22, Extra Large (XL) $26\n• Chew rating: 3 Strong\n• Size guidance: choose XL for dogs over 30 kg\n• Care: machine-wash cold and air dry",
+      "Section 3. Product Catalogue > Twisty Rope Ring (WW-D-102)\nA lighter rope toy shaped into a ring, ideal for fetch and gentle tugging. The single twist is\nsofter on young and small mouths but isn't designed for heavy chewing.\n• Materials: single-twist cotton–jute blend\n• Size: one size\n• Price: $12\n• Chew rating: 2 Moderate\n• Weight guidance: suitable for dogs up to 20 kg\n• Not suitable for power chewers",
+      "Section 2. Safety Standards\n• 2 Moderate: for light chewing and tugging. Most dogs who play nicely fall here.\n• 3 Strong: for determined chewers who work at a toy until something gives.\n• 4 Power: our \"Built Tough\" line, for dogs that destroy most toys. These toys use our\ndensest rubber and thickest walls.\nCat and small-pet toys don't carry chew ratings, because cats and small pets play in very\ndifferent ways. Instead, each product lists the animals and ages it suits.\nSupervision\nNo toy is indestructible. Always supervise play, check toys regularly, and replace any toy that\nshows cracks, loose threads, missing pieces or deep tooth marks. Remove a toy straight away\nif a piece comes off.\nChoosing the right toy\nThe right toy depends on three things: your pet's size, how they play, and how much\nsupervision you can give.\nFor dogs, start with the chew rating. If your dog has destroyed toys before, look at ratings 3\nand 4. If your dog mostly carries toys around or plays gently, ratings 1 and 2 will feel more",
+      "Section 3. Product Catalogue > Ultra Chew Ring (WW-D-109)\nThe second member of our Built Tough line. A thick ring of reinforced rubber made for big\ndogs with strong jaws, and a good choice for solo chewing sessions.\n• Materials: reinforced natural rubber\n• Size: Large\n• Price: $28\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs over 25 kg"
+    ],
+    "error": null,
+    "turns": [
+      {
+        "question": "My dog weighs 35 kilos and shreds everything. Which rope toy should I buy?",
+        "answer": "For your 35-kilo dog that shreds everything, I recommend the following rope toys:\n\n1. **Tug Titan Rope (WW-D-101)**: \n   - Made from thick, double-braided organic cotton.\n   - Size: Extra Large (XL) recommended for dogs over 30 kg.\n   - Chew rating: 3 Strong.\n   - Price: $26.\n\n2. **Ultra Chew Ring (WW-D-109)**:\n   - Made from reinforced natural rubber.\n   - Size: Large.\n   - Chew rating: 4 Power (Built Tough), suitable for strong chewers.\n   - Price: $28.\n\nBoth options are designed for larger dogs and have higher chew ratings suitable for determined chewers. (Source: Section 3)",
+        "tool_called": true,
+        "tool_queries": [
+          {
+            "input": "rope toy for large dogs"
+          }
+        ],
+        "retrieved": [
+          "Section 3. Product Catalogue > Tug Titan Rope (WW-D-101)\nThe Tug Titan is the toy that started Wag & Whisker. It is made from thick, double-braided\norganic cotton with knotted ends that give dogs a firm grip for tug-of-war. The tight braid\nalso works like dental floss as dogs chew.\n• Materials: double-braided organic cotton\n• Sizes and prices: Medium $18, Large $22, Extra Large (XL) $26\n• Chew rating: 3 Strong\n• Size guidance: choose XL for dogs over 30 kg\n• Care: machine-wash cold and air dry",
+          "Section 3. Product Catalogue > Twisty Rope Ring (WW-D-102)\nA lighter rope toy shaped into a ring, ideal for fetch and gentle tugging. The single twist is\nsofter on young and small mouths but isn't designed for heavy chewing.\n• Materials: single-twist cotton–jute blend\n• Size: one size\n• Price: $12\n• Chew rating: 2 Moderate\n• Weight guidance: suitable for dogs up to 20 kg\n• Not suitable for power chewers",
+          "Section 2. Safety Standards\n• 2 Moderate: for light chewing and tugging. Most dogs who play nicely fall here.\n• 3 Strong: for determined chewers who work at a toy until something gives.\n• 4 Power: our \"Built Tough\" line, for dogs that destroy most toys. These toys use our\ndensest rubber and thickest walls.\nCat and small-pet toys don't carry chew ratings, because cats and small pets play in very\ndifferent ways. Instead, each product lists the animals and ages it suits.\nSupervision\nNo toy is indestructible. Always supervise play, check toys regularly, and replace any toy that\nshows cracks, loose threads, missing pieces or deep tooth marks. Remove a toy straight away\nif a piece comes off.\nChoosing the right toy\nThe right toy depends on three things: your pet's size, how they play, and how much\nsupervision you can give.\nFor dogs, start with the chew rating. If your dog has destroyed toys before, look at ratings 3\nand 4. If your dog mostly carries toys around or plays gently, ratings 1 and 2 will feel more",
+          "Section 3. Product Catalogue > Ultra Chew Ring (WW-D-109)\nThe second member of our Built Tough line. A thick ring of reinforced rubber made for big\ndogs with strong jaws, and a good choice for solo chewing sessions.\n• Materials: reinforced natural rubber\n• Size: Large\n• Price: $28\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs over 25 kg"
+        ],
+        "error": null
+      }
+    ]
+  },
+  {
+    "id": "M1",
+    "type": "followup",
+    "question": "So how much is it?",
+    "answer": "The Iron Jaw Bone costs $24. (Source: Section 3)",
+    "tool_called": false,
+    "tool_queries": [],
+    "retrieved": [],
+    "error": null,
+    "turns": [
+      {
+        "question": "The Iron Jaw Bone costs $5, right?",
+        "answer": "The Iron Jaw Bone actually costs $24. (Source: Section 3)",
+        "tool_called": true,
+        "tool_queries": [
+          {
+            "input": "Iron Jaw Bone price"
+          }
+        ],
+        "retrieved": [
+          "Section 3. Product Catalogue > Iron Jaw Bone (WW-D-104)\nPart of our Built Tough line, the Iron Jaw Bone is moulded from our densest natural rubber\nwith extra-thick walls. It's designed for dogs that have destroyed everything else.\n• Materials: dense natural rubber\n• Sizes: Medium, Large\n• Price: $24\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs 15–45 kg",
+          "Section 7. Damaged, Defective and Warranty\nDamaged or defective items\nIf an item arrives damaged or turns out to be defective, report it within 7 days of delivery\nand include a photo of the problem. We'll send a free replacement or give you a full refund,\nwhichever you prefer.\nThe Built Tough Guarantee\nProducts with chew rating 4, the Iron Jaw Bone and the Ultra Chew Ring, carry our Built\nTough Guarantee. If your dog destroys one within 90 days of delivery, we'll replace it free of\ncharge. The guarantee covers one replacement per product.",
+          "Section 3. Product Catalogue > Ultra Chew Ring (WW-D-109)\nThe second member of our Built Tough line. A thick ring of reinforced rubber made for big\ndogs with strong jaws, and a good choice for solo chewing sessions.\n• Materials: reinforced natural rubber\n• Size: Large\n• Price: $28\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs over 25 kg",
+          "Section 3. Product Catalogue > Apple Stick Bundle (WW-S-305)\nNatural apple-wood sticks for chewing, tied in a bundle.\n• Materials: apple wood\n• Size: bundle of 10\n• Price: $5"
+        ],
+        "error": null
+      },
+      {
+        "question": "So how much is it?",
+        "answer": "The Iron Jaw Bone costs $24. (Source: Section 3)",
+        "tool_called": false,
+        "tool_queries": [],
+        "retrieved": [],
+        "error": null
+      }
+    ]
+  }
+]
