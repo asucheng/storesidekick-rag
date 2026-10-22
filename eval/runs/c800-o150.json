@@ -1,0 +1,155 @@
+[
+  {
+    "id": "D1",
+    "type": "direct",
+    "question": "What is the minimum order for free shipping in the US?",
+    "answer": "The minimum order for free shipping in the US is $35 or more. (Source: Section 5)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "minimum order for free shipping in the US"
+      }
+    ],
+    "retrieved": [
+      "All orders ship from our warehouse in Portland, Oregon.\nProcessing time\nOrders placed before 2 pm Pacific on a business day ship the same day. Orders placed after 2\npm Pacific, or on a weekend or US federal holiday, ship the next business day.\nUnited States: standard shipping\nStandard shipping within the US takes 3–5 business days after the order ships and costs\n$5.95. Standard shipping is free on orders of $35 or more.\nUnited States: express shipping\nExpress shipping within the US takes 1–2 business days after the order ships and costs\n$14.95. Express shipping isn't available to PO boxes.\nInternational shipping\nWe ship internationally only to Canada, the United Kingdom and Australia. International\ndelivery takes 7–14 business days after the order ships and costs a flat $19.95 per order.",
+      "email straight away, and a second email with tracking details when your parcel ships.\nPayment methods\nWe accept Visa, Mastercard, American Express, PayPal and Apple Pay. Payment is taken\nwhen you place your order.\nCurrency\nAll prices and charges are in US dollars only, including orders shipped outside the United\nStates. If your card is in another currency, your bank will convert the amount at its own rate.\nChanging or cancelling an order\nAn order can be changed or cancelled within 2 hours of being placed. Changes include\nswitching a size, adding or removing items, or correcting the delivery address. After 2 hours,\nthe order is packed and can't be changed. To request a change, email us with your order\nnumber as soon as possible.\n5. Shipping",
+      "delivery takes 7–14 business days after the order ships and costs a flat $19.95 per order.\nCustoms duties and import taxes are paid by the customer on delivery and aren't included in\nour prices or shipping charges.\nTracking\nEvery order includes tracking. Your tracking link is in the shipping confirmation email.\nDelivery problems\nIf tracking shows your parcel as delivered but you can't find it, check with neighbours and\naround your property first, as carriers sometimes leave parcels in a sheltered spot. If it still\nhasn't turned up, contact us within 14 days of the delivery date shown in tracking and we'll\nopen an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order",
+      "Redeeming points\n100 Pack Points = $5 off your order. You can redeem points at checkout in blocks of 100.\nPoint expiry\nPoints expire after 12 months with no purchase. Any purchase resets the 12-month clock for\nall your points.\nMembership tiers\n• Pup: every member starts at the Pup tier, from 0 points.\n• Pack: reach 500 points earned in a calendar year to join the Pack tier. Pack members\nget free express shipping on US orders over $50.\n• Alpha: reach 1,500 points earned in a calendar year to join the Alpha tier. Alpha\nmembers get early access to new toys and a birthday gift for their pet.\n10. Contact and Hours\n• Email: hello@wagandwhisker.example\n• Phone: (555) 010-2040\n• Hours: Monday to Friday, 9 am to 5 pm Pacific\n• We're closed on US federal holidays."
+    ]
+  },
+  {
+    "id": "D2",
+    "type": "direct",
+    "question": "How many Pack Points do I need to get $5 off?",
+    "answer": "You need 100 Pack Points to get $5 off your order. You can redeem points at checkout in blocks of 100. (Source: Section 9)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "Pack Points $5 off"
+      }
+    ],
+    "retrieved": [
+      "Redeeming points\n100 Pack Points = $5 off your order. You can redeem points at checkout in blocks of 100.\nPoint expiry\nPoints expire after 12 months with no purchase. Any purchase resets the 12-month clock for\nall your points.\nMembership tiers\n• Pup: every member starts at the Pup tier, from 0 points.\n• Pack: reach 500 points earned in a calendar year to join the Pack tier. Pack members\nget free express shipping on US orders over $50.\n• Alpha: reach 1,500 points earned in a calendar year to join the Alpha tier. Alpha\nmembers get early access to new toys and a birthday gift for their pet.\n10. Contact and Hours\n• Email: hello@wagandwhisker.example\n• Phone: (555) 010-2040\n• Hours: Monday to Friday, 9 am to 5 pm Pacific\n• We're closed on US federal holidays.",
+      "Squeaky Sam recall (March 2024)\nIn March 2024 we recalled the \"Squeaky Sam\" plush toy (former SKU WW-D-099) because its\nsqueaker could detach during play. Squeaky Sam has been discontinued. If you still own one,\nstop using it and email us for a full refund; no receipt is needed.\nHow we share safety notices\nCurrent safety notices are posted on our website and emailed to every customer who bought\nthe affected product.\n9. Pack Points Loyalty Programme\nPack Points is our free loyalty programme. Every customer with an account is enrolled\nautomatically.\nEarning points\nYou earn 1 point for every $1 you spend, calculated before shipping charges.\nRedeeming points\n100 Pack Points = $5 off your order. You can redeem points at checkout in blocks of 100.\nPoint expiry",
+      "• Size: one size\n• Price: $9\n• Suitable for hamsters and gerbils\nApple Stick Bundle (WW-S-305)\nNatural apple-wood sticks for chewing, tied in a bundle.\n• Materials: apple wood\n• Size: bundle of 10\n• Price: $5\nHide-Away Hut (WW-S-306)\nA woven seagrass hut that gives small pets a quiet place to rest. It's also safe to nibble.\n• Materials: seagrass\n• Sizes: Small, Large\n• Price: $16\nHay Ball Feeder (WW-S-307)\nA hanging stainless wire ball that holds hay off the floor, keeping it clean and making\nmealtimes more active.\n• Materials: stainless wire\n• Size: one size\n• Price: $11\n4. Ordering and Payment\nYou can place an order on our website at any time. You'll receive an order confirmation\nemail straight away, and a second email with tracking details when your parcel ships.\nPayment methods",
+      "Exchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return\nWhen your return arrives, our warehouse team checks that the item is unused and in its\noriginal packaging. If everything is in order, we process the refund (see the timing above)\nand send you a confirmation email. If an item doesn't meet the return conditions, we'll email\nyou to explain and send the item back to you at no charge.\nItems bought with Pack Points\nIf you return an item from an order where you redeemed Pack Points, the points are returned\nto your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items"
+    ]
+  },
+  {
+    "id": "D3",
+    "type": "direct",
+    "question": "How long do I have to return an item?",
+    "answer": "You can return unused items in their original packaging within 30 days of delivery. (Source: Section 6)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "return policy"
+      }
+    ],
+    "retrieved": [
+      "Exchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return\nWhen your return arrives, our warehouse team checks that the item is unused and in its\noriginal packaging. If everything is in order, we process the refund (see the timing above)\nand send you a confirmation email. If an item doesn't meet the return conditions, we'll email\nyou to explain and send the item back to you at no charge.\nItems bought with Pack Points\nIf you return an item from an order where you redeemed Pack Points, the points are returned\nto your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items",
+      "Used toys\nFor hygiene reasons, toys that have been used or played with can't be returned unless they\nare defective. If a toy is defective, see Section 7.\nHow to start a return\nStart a return from the link in your order email. Choose the items you're returning, then print\nthe return label and attach it to the parcel.\nReturn shipping cost\nA $6 return label fee is deducted from your refund, unless the item is defective.\nRefunds\nRefunds are issued to your original payment method within 5 business days after the return\narrives at our warehouse. Your bank may take a few extra days to show the refund.\nExchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return",
+      "to your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items\nIf an item arrives damaged or turns out to be defective, report it within 7 days of delivery\nand include a photo of the problem. We'll send a free replacement or give you a full refund,\nwhichever you prefer.\nThe Built Tough Guarantee\nProducts with chew rating 4, the Iron Jaw Bone and the Ultra Chew Ring, carry our Built\nTough Guarantee. If your dog destroys one within 90 days of delivery, we'll replace it free of\ncharge. The guarantee covers one replacement per product.\n8. Recalls and Safety Notices",
+      "open an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order\nnumber and we'll check its progress with the carrier for you.\nIncorrect addresses\nPlease double-check your delivery address at checkout. If you spot a mistake, the address can\nbe corrected only while the order can still be changed (see Section 4). Once a parcel has\nshipped, we can't redirect it.\n6. Returns and Exchanges\nWe want every toy to be the right fit. If something isn't right, here's how returns and\nexchanges work.\nReturn window\nYou can return unused items in their original packaging within 30 days of delivery."
+    ]
+  },
+  {
+    "id": "P1",
+    "type": "paraphrase",
+    "question": "My dog weighs 35 kilos and shreds everything. Which rope toy should I buy?",
+    "answer": "For your 35-kilo dog that shreds everything, I recommend the **Tug Titan Rope**. It's made from thick, double-braided organic cotton with knotted ends, designed for strong grip during tug-of-war. It has a chew rating of 3 (Strong) and is suitable for dogs over 30 kg. \n\nAnother option is the **Ultra Chew Ring**, which is a thick ring of reinforced rubber made for big dogs with strong jaws, rated 4 (Power) for chewing, and is priced at $28.\n\n(Source: Section 3)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "rope toy for large dogs"
+      }
+    ],
+    "retrieved": [
+      "organic cotton with knotted ends that give dogs a firm grip for tug-of-war. The tight braid\nalso works like dental floss as dogs chew.\n• Materials: double-braided organic cotton\n• Sizes and prices: Medium $18, Large $22, Extra Large (XL) $26\n• Chew rating: 3 Strong\n• Size guidance: choose XL for dogs over 30 kg\n• Care: machine-wash cold and air dry\nTwisty Rope Ring (WW-D-102)",
+      "A lighter rope toy shaped into a ring, ideal for fetch and gentle tugging. The single twist is\nsofter on young and small mouths but isn't designed for heavy chewing.\n• Materials: single-twist cotton–jute blend\n• Size: one size\n• Price: $12\n• Chew rating: 2 Moderate\n• Weight guidance: suitable for dogs up to 20 kg\n• Not suitable for power chewers\nBounce Buddy Ball (WW-D-103)\nA hollow natural-rubber ball with an unpredictable bounce that keeps dogs chasing. It floats,\nso it's a favourite for lakes, pools and beach days.\n• Materials: natural rubber\n• Sizes: Small, Medium, Large\n• Price: $9\n• Chew rating: 3 Strong\n• Size guidance: match the ball size to your dog's mouth; the ball should be too large to\nfit fully inside the mouth\nIron Jaw Bone (WW-D-104)",
+      "clean them, and retire any toy that is starting to break apart.\nRotating toys\nPets get bored of the same toy, just like people do. Keeping two or three toys out at a time\nand swapping them every few days makes each toy feel new again and spreads the wear\nacross more toys, so each one lasts longer.\n3. Product Catalogue\nOur catalogue is grouped into dog toys, cat toys and small-pet toys. Each entry lists the SKU,\nprice, materials, available sizes, chew rating (for dogs) and any size, weight or age guidance.\nDog toys\nTug Titan Rope (WW-D-101)\nThe Tug Titan is the toy that started Wag & Whisker. It is made from thick, double-braided\norganic cotton with knotted ends that give dogs a firm grip for tug-of-war. The tight braid\nalso works like dental floss as dogs chew.",
+      "• Chew rating: 2 Moderate\nUltra Chew Ring (WW-D-109)\nThe second member of our Built Tough line. A thick ring of reinforced rubber made for big\ndogs with strong jaws, and a good choice for solo chewing sessions.\n• Materials: reinforced natural rubber\n• Size: Large\n• Price: $28\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs over 25 kg\nTidy Tug Stick (WW-D-110)\nA short felted-wool stick that's soft enough for small mouths and quiet enough for apartment\nplay.\n• Materials: felted wool\n• Size: one size\n• Price: $10\n• Chew rating: 2 Moderate\n• Age and size guidance: for small dogs and puppies over 10 weeks\nCat toys\nWhisker Wand (WW-C-201)\nA classic wand toy for interactive play. The bamboo wand and organic cotton string carry a\nwool pom that darts and bounces like prey."
+    ]
+  },
+  {
+    "id": "P2",
+    "type": "paraphrase",
+    "question": "My cat already batted the feather teaser around and didn't like it. Can I send it back?",
+    "answer": "You cannot return the feather teaser since it has been used. For hygiene reasons, toys that have been played with can't be returned unless they are defective. If the toy is defective, you can report it within 7 days of delivery for a replacement or refund. (Source: Section 6)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "returns policy"
+      }
+    ],
+    "retrieved": [
+      "Exchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return\nWhen your return arrives, our warehouse team checks that the item is unused and in its\noriginal packaging. If everything is in order, we process the refund (see the timing above)\nand send you a confirmation email. If an item doesn't meet the return conditions, we'll email\nyou to explain and send the item back to you at no charge.\nItems bought with Pack Points\nIf you return an item from an order where you redeemed Pack Points, the points are returned\nto your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items",
+      "Used toys\nFor hygiene reasons, toys that have been used or played with can't be returned unless they\nare defective. If a toy is defective, see Section 7.\nHow to start a return\nStart a return from the link in your order email. Choose the items you're returning, then print\nthe return label and attach it to the parcel.\nReturn shipping cost\nA $6 return label fee is deducted from your refund, unless the item is defective.\nRefunds\nRefunds are issued to your original payment method within 5 business days after the return\narrives at our warehouse. Your bank may take a few extra days to show the refund.\nExchanges\nExchanges for a different size of the same product are free, with no return label fee.\nWhat happens after you send a return",
+      "open an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order\nnumber and we'll check its progress with the carrier for you.\nIncorrect addresses\nPlease double-check your delivery address at checkout. If you spot a mistake, the address can\nbe corrected only while the order can still be changed (see Section 4). Once a parcel has\nshipped, we can't redirect it.\n6. Returns and Exchanges\nWe want every toy to be the right fit. If something isn't right, here's how returns and\nexchanges work.\nReturn window\nYou can return unused items in their original packaging within 30 days of delivery.",
+      "to your account and any amount you paid by card or other method is refunded as normal.\n7. Damaged, Defective and Warranty\nDamaged or defective items\nIf an item arrives damaged or turns out to be defective, report it within 7 days of delivery\nand include a photo of the problem. We'll send a free replacement or give you a full refund,\nwhichever you prefer.\nThe Built Tough Guarantee\nProducts with chew rating 4, the Iron Jaw Bone and the Ultra Chew Ring, carry our Built\nTough Guarantee. If your dog destroys one within 90 days of delivery, we'll replace it free of\ncharge. The guarantee covers one replacement per product.\n8. Recalls and Safety Notices"
+    ]
+  },
+  {
+    "id": "A1",
+    "type": "ambiguous",
+    "question": "How long does it take?",
+    "answer": "Shipping times vary based on the method chosen:\n\n- **Standard Shipping (within the US)**: Takes 3–5 business days after the order ships.\n- **Express Shipping (within the US)**: Takes 1–2 business days after the order ships.\n- **International Shipping**: Takes 7–14 business days after the order ships.\n\nOrders placed before 2 pm Pacific on a business day ship the same day; those placed after 2 pm or on weekends/holidays ship the next business day. (Source: Section 5)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "shipping time"
+      }
+    ],
+    "retrieved": [
+      "All orders ship from our warehouse in Portland, Oregon.\nProcessing time\nOrders placed before 2 pm Pacific on a business day ship the same day. Orders placed after 2\npm Pacific, or on a weekend or US federal holiday, ship the next business day.\nUnited States: standard shipping\nStandard shipping within the US takes 3–5 business days after the order ships and costs\n$5.95. Standard shipping is free on orders of $35 or more.\nUnited States: express shipping\nExpress shipping within the US takes 1–2 business days after the order ships and costs\n$14.95. Express shipping isn't available to PO boxes.\nInternational shipping\nWe ship internationally only to Canada, the United Kingdom and Australia. International\ndelivery takes 7–14 business days after the order ships and costs a flat $19.95 per order.",
+      "delivery takes 7–14 business days after the order ships and costs a flat $19.95 per order.\nCustoms duties and import taxes are paid by the customer on delivery and aren't included in\nour prices or shipping charges.\nTracking\nEvery order includes tracking. Your tracking link is in the shipping confirmation email.\nDelivery problems\nIf tracking shows your parcel as delivered but you can't find it, check with neighbours and\naround your property first, as carriers sometimes leave parcels in a sheltered spot. If it still\nhasn't turned up, contact us within 14 days of the delivery date shown in tracking and we'll\nopen an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order",
+      "open an investigation with the carrier.\nIf your parcel is delayed well beyond the delivery times above, contact us with your order\nnumber and we'll check its progress with the carrier for you.\nIncorrect addresses\nPlease double-check your delivery address at checkout. If you spot a mistake, the address can\nbe corrected only while the order can still be changed (see Section 4). Once a parcel has\nshipped, we can't redirect it.\n6. Returns and Exchanges\nWe want every toy to be the right fit. If something isn't right, here's how returns and\nexchanges work.\nReturn window\nYou can return unused items in their original packaging within 30 days of delivery.",
+      "email straight away, and a second email with tracking details when your parcel ships.\nPayment methods\nWe accept Visa, Mastercard, American Express, PayPal and Apple Pay. Payment is taken\nwhen you place your order.\nCurrency\nAll prices and charges are in US dollars only, including orders shipped outside the United\nStates. If your card is in another currency, your bank will convert the amount at its own rate.\nChanging or cancelling an order\nAn order can be changed or cancelled within 2 hours of being placed. Changes include\nswitching a size, adding or removing items, or correcting the delivery address. After 2 hours,\nthe order is packed and can't be changed. To request a change, email us with your order\nnumber as soon as possible.\n5. Shipping"
+    ]
+  },
+  {
+    "id": "U1",
+    "type": "unanswerable",
+    "question": "Do you offer gift wrapping?",
+    "answer": "I can't find that in the Wag & Whisker handbook. You may want to email hello@wagandwhisker.example for more information.",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "gift wrapping"
+      }
+    ],
+    "retrieved": [
+      "Packaging and sustainability\nOur toys ship in plain recycled cardboard boxes sealed with paper tape. We don't use plastic\nair pillows or polystyrene; instead, we cushion parcels with shredded cardboard from our\nown warehouse offcuts. Product tags are printed on recycled card and attached with cotton",
+      "• Size: one size\n• Price: $25\nFelted Mouse Trio (WW-C-204)\nThree hand-felted wool mice, small enough to bat across the floor and soft enough to carry.\n• Materials: felted wool\n• Size: pack of 3\n• Price: $11\n• Catnip-free\nFeather Flurry Teaser (WW-C-205)\nA teaser wand with a bundle of natural feathers that flutter with every flick of the wrist.\n• Materials: wand with natural feathers\n• Size: one size\n• Price: $12\n• Care: replace the feathers when worn; a feather refill pack costs $5\nScratch & Snooze Lounger (WW-C-206)\nA curved scratcher made from recycled cardboard that doubles as a lounger. Flip it over\nwhen one side wears down.\n• Materials: recycled cardboard\n• Size: one size\n• Price: $34\n• Reversible",
+      "• Size: one size\n• Price: $9\n• Suitable for hamsters and gerbils\nApple Stick Bundle (WW-S-305)\nNatural apple-wood sticks for chewing, tied in a bundle.\n• Materials: apple wood\n• Size: bundle of 10\n• Price: $5\nHide-Away Hut (WW-S-306)\nA woven seagrass hut that gives small pets a quiet place to rest. It's also safe to nibble.\n• Materials: seagrass\n• Sizes: Small, Large\n• Price: $16\nHay Ball Feeder (WW-S-307)\nA hanging stainless wire ball that holds hay off the floor, keeping it clean and making\nmealtimes more active.\n• Materials: stainless wire\n• Size: one size\n• Price: $11\n4. Ordering and Payment\nYou can place an order on our website at any time. You'll receive an order confirmation\nemail straight away, and a second email with tracking details when your parcel ships.\nPayment methods",
+      "• Materials: bamboo wand, organic cotton string, wool pom\n• Size: one size\n• Price: $13\n• Age guidance: not for kittens under 12 weeks\n• Safety note: store the wand out of reach after play, because cats can chew or swallow\nthe string when unsupervised\nCrinkle Kicker (WW-C-202)\nA long kicker pillow for cats who love to grab and bunny-kick. Crinkle film inside makes a\nsatisfying sound.\n• Materials: organic cotton, crinkle film\n• Size: one size\n• Price: $8\n• Contains catnip\nTrack Tower (WW-C-203)\nA three-level wooden tower with a ball in each track. Cats bat the balls around the rings for\nindependent play.\n• Materials: wood, three ball tracks\n• Size: one size\n• Price: $25\nFelted Mouse Trio (WW-C-204)\nThree hand-felted wool mice, small enough to bat across the floor and soft enough to carry."
+    ]
+  },
+  {
+    "id": "U2",
+    "type": "unanswerable",
+    "question": "When will the Laser Mouse Pro be back in stock?",
+    "answer": "I can't find that in the Wag & Whisker handbook. Please email hello@wagandwhisker.example for assistance.",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "Laser Mouse Pro stock availability"
+      }
+    ],
+    "retrieved": [
+      "Laser Lite Pointer (WW-C-207)\nA compact laser pointer for chase games, with a USB-C rechargeable battery.\n• Materials: aluminium body, USB-C rechargeable\n• Size: one size\n• Price: $15\n• Safety note: never shine the laser at eyes, and end each play session on a toy your cat\ncan actually catch, so the game feels finished\nSilvervine Sticks (WW-C-208)\nNatural silvervine sticks that many cats find even more exciting than catnip. They also give\ncats something satisfying to chew.\n• Materials: natural silvervine\n• Size: pack of 6\n• Price: $7\nSmall-pet toys\nTimothy Tunnel (WW-S-301)\nA woven tunnel made entirely of timothy hay. Small pets can run through it, hide in it and\neat it.\n• Materials: woven timothy hay\n• Size: one size\n• Price: $14\n• Edible\n• Suitable for rabbits and guinea pigs",
+      "• Size: one size\n• Price: $25\nFelted Mouse Trio (WW-C-204)\nThree hand-felted wool mice, small enough to bat across the floor and soft enough to carry.\n• Materials: felted wool\n• Size: pack of 3\n• Price: $11\n• Catnip-free\nFeather Flurry Teaser (WW-C-205)\nA teaser wand with a bundle of natural feathers that flutter with every flick of the wrist.\n• Materials: wand with natural feathers\n• Size: one size\n• Price: $12\n• Care: replace the feathers when worn; a feather refill pack costs $5\nScratch & Snooze Lounger (WW-C-206)\nA curved scratcher made from recycled cardboard that doubles as a lounger. Flip it over\nwhen one side wears down.\n• Materials: recycled cardboard\n• Size: one size\n• Price: $34\n• Reversible",
+      "Squeaky Sam recall (March 2024)\nIn March 2024 we recalled the \"Squeaky Sam\" plush toy (former SKU WW-D-099) because its\nsqueaker could detach during play. Squeaky Sam has been discontinued. If you still own one,\nstop using it and email us for a full refund; no receipt is needed.\nHow we share safety notices\nCurrent safety notices are posted on our website and emailed to every customer who bought\nthe affected product.\n9. Pack Points Loyalty Programme\nPack Points is our free loyalty programme. Every customer with an account is enrolled\nautomatically.\nEarning points\nYou earn 1 point for every $1 you spend, calculated before shipping charges.\nRedeeming points\n100 Pack Points = $5 off your order. You can redeem points at checkout in blocks of 100.\nPoint expiry",
+      "All orders ship from our warehouse in Portland, Oregon.\nProcessing time\nOrders placed before 2 pm Pacific on a business day ship the same day. Orders placed after 2\npm Pacific, or on a weekend or US federal holiday, ship the next business day.\nUnited States: standard shipping\nStandard shipping within the US takes 3–5 business days after the order ships and costs\n$5.95. Standard shipping is free on orders of $35 or more.\nUnited States: express shipping\nExpress shipping within the US takes 1–2 business days after the order ships and costs\n$14.95. Express shipping isn't available to PO boxes.\nInternational shipping\nWe ship internationally only to Canada, the United Kingdom and Australia. International\ndelivery takes 7–14 business days after the order ships and costs a flat $19.95 per order."
+    ]
+  },
+  {
+    "id": "F1",
+    "type": "followup",
+    "question": "Is it okay for my 8-week-old kitten?",
+    "answer": "The Whisker Wand is not recommended for kittens under 12 weeks old. I suggest waiting until your kitten is older before using this toy (Source: Section 6).",
+    "tool_called": false,
+    "tool_queries": [],
+    "retrieved": []
+  }
+]
