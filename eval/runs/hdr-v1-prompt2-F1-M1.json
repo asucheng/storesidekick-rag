@@ -1,0 +1,76 @@
+[
+  {
+    "id": "F1",
+    "type": "followup",
+    "question": "Is it okay for my 8-week-old kitten?",
+    "answer": "The Whisker Wand is not suitable for kittens under 12 weeks old. Since your kitten is 8 weeks old, it would be best to wait until they are older before using this toy. \n\n(Source: Section 3)",
+    "tool_called": false,
+    "tool_queries": [],
+    "retrieved": [],
+    "error": null,
+    "turns": [
+      {
+        "question": "Tell me about the Whisker Wand.",
+        "answer": "The Whisker Wand (WW-C-201) is a classic wand toy designed for interactive play. It features a bamboo wand and organic cotton string, with a wool pom that darts and bounces like prey. Here are some details:\n\n- **Materials**: Bamboo wand, organic cotton string, wool pom\n- **Size**: One size\n- **Price**: $13\n- **Age Guidance**: Not suitable for kittens under 12 weeks\n- **Safety Note**: Store the wand out of reach after play, as cats can chew or swallow the string when unsupervised.\n\n(Source: Section 3)",
+        "tool_called": true,
+        "tool_queries": [
+          {
+            "input": "Whisker Wand"
+          }
+        ],
+        "retrieved": [
+          "Section 3. Product Catalogue > Whisker Wand (WW-C-201)\nA classic wand toy for interactive play. The bamboo wand and organic cotton string carry a\nwool pom that darts and bounces like prey.\n• Materials: bamboo wand, organic cotton string, wool pom\n• Size: one size\n• Price: $13\n• Age guidance: not for kittens under 12 weeks\n• Safety note: store the wand out of reach after play, because cats can chew or swallow\nthe string when unsupervised",
+          "Section 3. Product Catalogue > Feather Flurry Teaser (WW-C-205)\nA teaser wand with a bundle of natural feathers that flutter with every flick of the wrist.\n• Materials: wand with natural feathers\n• Size: one size\n• Price: $12\n• Care: replace the feathers when worn; a feather refill pack costs $5",
+          "Section 1. About Wag & Whisker\nWag & Whisker was founded in 2019 in Portland, Oregon by Maya Torres. The idea started\nwith her rescue dog, Biscuit, a cheerful mixed breed with a talent for destroying cheap toys\nin minutes. After a year of sweeping stuffing off the floor and fishing plastic squeakers out of\nBiscuit's mouth, Maya decided to make toys she could trust: toys made from honest\nmaterials, sized properly, and built to last as long as the animal playing with them.\nWhat began as a handful of rope toys sold at weekend markets is now an online store with a\ncatalogue for dogs, cats and small pets. Every order is packed and shipped from our\nwarehouse in Portland. We don't use third-party sellers or overseas fulfilment centres, which\nmeans we can check every parcel before it leaves.\nOur values are simple, and they guide every product decision:\n• Durable. A toy that falls apart is not only a waste of money, it can be dangerous. We\ndesign for the way animals actually play, not the way we wish they did.",
+          "Introduction\nWag & Whisker Store Handbook\nWag & Whisker is a fictional store created for an AI engineering project. All products, people and\npolicies are invented.\nThis handbook is the single reference for how Wag & Whisker works: who we are, how we\nkeep toys safe, every product we sell, and the policies that apply to orders, shipping, returns,\nwarranty claims, recalls and our loyalty programme. If a question isn't answered here, please\ncontact us using the details in Section 10."
+        ],
+        "error": null
+      },
+      {
+        "question": "Is it okay for my 8-week-old kitten?",
+        "answer": "The Whisker Wand is not suitable for kittens under 12 weeks old. Since your kitten is 8 weeks old, it would be best to wait until they are older before using this toy. \n\n(Source: Section 3)",
+        "tool_called": false,
+        "tool_queries": [],
+        "retrieved": [],
+        "error": null
+      }
+    ]
+  },
+  {
+    "id": "M1",
+    "type": "followup",
+    "question": "So how much is it?",
+    "answer": "The Iron Jaw Bone costs $24. (Source: Section 3)",
+    "tool_called": false,
+    "tool_queries": [],
+    "retrieved": [],
+    "error": null,
+    "turns": [
+      {
+        "question": "The Iron Jaw Bone costs $5, right?",
+        "answer": "The Iron Jaw Bone actually costs $24. If you're looking for a product that costs $5, you might be interested in the Apple Stick Bundle, which is priced at $5. (Source: Section 3)",
+        "tool_called": true,
+        "tool_queries": [
+          {
+            "input": "Iron Jaw Bone price"
+          }
+        ],
+        "retrieved": [
+          "Section 3. Product Catalogue > Iron Jaw Bone (WW-D-104)\nPart of our Built Tough line, the Iron Jaw Bone is moulded from our densest natural rubber\nwith extra-thick walls. It's designed for dogs that have destroyed everything else.\n• Materials: dense natural rubber\n• Sizes: Medium, Large\n• Price: $24\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs 15–45 kg",
+          "Section 7. Damaged, Defective and Warranty\nDamaged or defective items\nIf an item arrives damaged or turns out to be defective, report it within 7 days of delivery\nand include a photo of the problem. We'll send a free replacement or give you a full refund,\nwhichever you prefer.\nThe Built Tough Guarantee\nProducts with chew rating 4, the Iron Jaw Bone and the Ultra Chew Ring, carry our Built\nTough Guarantee. If your dog destroys one within 90 days of delivery, we'll replace it free of\ncharge. The guarantee covers one replacement per product.",
+          "Section 3. Product Catalogue > Ultra Chew Ring (WW-D-109)\nThe second member of our Built Tough line. A thick ring of reinforced rubber made for big\ndogs with strong jaws, and a good choice for solo chewing sessions.\n• Materials: reinforced natural rubber\n• Size: Large\n• Price: $28\n• Chew rating: 4 Power (Built Tough)\n• Weight guidance: for dogs over 25 kg",
+          "Section 3. Product Catalogue > Apple Stick Bundle (WW-S-305)\nNatural apple-wood sticks for chewing, tied in a bundle.\n• Materials: apple wood\n• Size: bundle of 10\n• Price: $5"
+        ],
+        "error": null
+      },
+      {
+        "question": "So how much is it?",
+        "answer": "The Iron Jaw Bone costs $24. (Source: Section 3)",
+        "tool_called": false,
+        "tool_queries": [],
+        "retrieved": [],
+        "error": null
+      }
+    ]
+  }
+]

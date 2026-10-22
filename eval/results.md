@@ -32,7 +32,7 @@ Run 1 had no retrieval failures, so two cases worded unlike the handbook were ad
 | P3 | paraphrase | Iron Jaw Bone (1st) | Y | Y | generation (citation) | Right bone and facts, but cites **"Sections 1, 7"**. The product is in Section 3. |
 | P4 | paraphrase | §4 order changes (1st) | Y | Y | — | Within 2 hours; cites Section 4. |
 
-Retrieval still didn't fail. The recurring problem is **wrong section citations** (F1, P3, and the Iron Jaw smoke test) and **facts separated from their product name** (P1), both traced to chunks that don't carry their own context.
+Retrieval still didn't fail. The process called for adding harder paraphrases *until one fails*. I stopped after two, because the failures that did occur pointed clearly at chunk content (attribution) rather than ranking, and the improvement targets that. Retrieval robustness beyond these cases is untested (see Limits below). The recurring problem is **wrong section citations** (F1, P3, and the Iron Jaw smoke test) and **facts separated from their product name** (P1), both traced to chunks that don't carry their own context.
 
 ## The improvement: heading-aware chunks
 
@@ -120,3 +120,16 @@ Each change fixed the kind of error it targeted. The **retrieval** change fixed 
 **Limits of this evidence:**
 - Each case was run once (temperature 0), and the set is small (13 cases), so 13/13 shows the rules work on these questions, not that the bot is reliable in general.
 - The two held-out cases are the main guard against tuning to the test. A larger held-out set would be the next step.
+
+## Memory evidence on the final config (`hdr-v1` + prompt v2)
+
+Recorded after the final review, with the runner now saving every turn: [`runs/hdr-v1-prompt2-F1-M1.json`](runs/hdr-v1-prompt2-F1-M1.json).
+
+| ID | Turn 1 | Turn 2 | Memory OK | Notes |
+| --- | --- | --- | --- | --- |
+| F1 | "Tell me about the Whisker Wand." → searched, retrieved `Section 3 > Whisker Wand (WW-C-201)`, listed "not suitable for kittens under 12 weeks" | "Is it okay for my 8-week-old kitten?" → no new search; "not suitable for kittens under 12 weeks… wait until they are older" (Section 3) | Y | "It" resolved from history. The turn-2 fact comes from the handbook chunk retrieved in turn 1. |
+| M1 | "The Iron Jaw Bone costs $5, right?" → searched, retrieved `Section 3 > Iron Jaw Bone`, **"actually costs $24"** | "So how much is it?" → no new search; **"$24"** (Section 3) | Y | The user's false claim was never treated as a store fact. Turn 1 also volunteered an unasked suggestion ("the Apple Stick Bundle, which is priced at $5"). This is the same kind of off-question product suggestion as P1 in runs 1–2; **grading pending**. |
+
+**Open grading questions:**
+- **M1:** should the unasked Apple Stick Bundle suggestion count as a generation failure (as P1 did)?
+- **P1 (run 3):** besides naming the Tug Titan XL, the answer adds "This toy is designed for strong chewers and should hold up well for your dog." The handbook rates the Tug Titan 3 Strong, reserves "dogs that destroy most toys" for rating 4, and says "No toy is indestructible", so "should hold up well" is an unsupported claim. Pass, or pass with a residual issue?

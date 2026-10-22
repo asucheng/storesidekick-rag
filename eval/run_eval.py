@@ -2,10 +2,11 @@
 """Eval runner for the Wag & Whisker chatbot.
 
   python3 eval/run_eval.py --questions        # write eval/questions.md from cases.json
-  python3 eval/run_eval.py --run c800-o150    # (Task 7) send cases to the chat webhook
+  python3 eval/run_eval.py --run <config>     # send cases to the chat webhook; saves eval/runs/<config>.json
 """
 import argparse
 import json
+import os
 import time
 import urllib.request
 from pathlib import Path
@@ -30,7 +31,9 @@ def write_questions() -> None:
     print("wrote", HERE / "questions.md")
 
 
-CHAT_URL = "http://localhost:5678/webhook/3b6f8f2e-7c1a-4d55-9a3e-2f0c9b7d4a11/chat"
+CHAT_URL = os.environ.get(
+    "CHAT_URL", "http://localhost:5678/webhook/3b6f8f2e-7c1a-4d55-9a3e-2f0c9b7d4a11/chat"
+)
 
 
 def ask(session: str, text: str) -> dict:
@@ -66,30 +69,39 @@ def retrieved(response: dict) -> list[dict]:
     return chunks
 
 
-def run(config: str, ids: set[str] | None = None) -> None:
+def run(config: str, ids: set[str] | None = None, force: bool = False) -> None:
+    out = HERE / "runs" / (f"{config}.json" if not ids else f"{config}-{'-'.join(sorted(ids))}.json")
+    if out.exists() and not force:
+        raise SystemExit(f"{out} already exists (committed evidence). Use a new config name, or --force to overwrite.")
+    out.parent.mkdir(exist_ok=True)
     results = []
     for case in CASES:
         if ids and case["id"] not in ids:
             continue
         session = f"eval-{config}-{case['id']}-{int(time.time())}"
-        response = {}
-        for turn in case["turns"]:
-            response = ask(session, turn)
-        steps = response.get("intermediateSteps") or []
-        chunks = retrieved(response)
-        results.append({
-            "id": case["id"],
-            "type": case["type"],
-            "question": case["turns"][-1],
-            "answer": response.get("output", ""),
-            "tool_called": bool(steps),
-            "tool_queries": [s["action"].get("toolInput") for s in steps],
-            "retrieved": [c.get("pageContent", "") for c in chunks],
-        })
-        print(f"{case['id']}: tool_called={bool(steps)} chunks={len(chunks)}")
-    out = HERE / "runs" / (f"{config}.json" if not ids else f"{config}-{'-'.join(sorted(ids))}.json")
-    out.parent.mkdir(exist_ok=True)
-    out.write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        turns = []
+        for text in case["turns"]:
+            try:
+                response = ask(session, text)
+                error = None
+            except Exception as exc:  # keep going: one failed call shouldn't lose the answers already paid for
+                response, error = {}, f"{type(exc).__name__}: {exc}"
+            steps = response.get("intermediateSteps") or []
+            turns.append({
+                "question": text,
+                "answer": response.get("output", ""),
+                "tool_called": bool(steps),
+                "tool_queries": [s["action"].get("toolInput") for s in steps],
+                "retrieved": [c.get("pageContent", "") for c in retrieved(response)],
+                "error": error,
+            })
+            if error:
+                break
+        last = turns[-1]
+        results.append({"id": case["id"], "type": case["type"], **last, "turns": turns})
+        print(f"{case['id']}: tool_called={last['tool_called']} chunks={len(last['retrieved'])}"
+              + (f" ERROR {last['error']}" if last["error"] else ""))
+        out.write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("wrote", out)
 
 
@@ -98,11 +110,12 @@ def main() -> None:
     parser.add_argument("--questions", action="store_true")
     parser.add_argument("--run", metavar="CONFIG")
     parser.add_argument("--ids", help="comma-separated case ids to run (default: all)")
+    parser.add_argument("--force", action="store_true", help="overwrite an existing results file")
     args = parser.parse_args()
     if args.questions:
         write_questions()
     if args.run:
-        run(args.run, set(args.ids.split(",")) if args.ids else None)
+        run(args.run, set(args.ids.split(",")) if args.ids else None, args.force)
 
 
 if __name__ == "__main__":

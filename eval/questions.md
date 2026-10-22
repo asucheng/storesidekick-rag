@@ -17,3 +17,4 @@ Written before any run. Source: `cases.json`.
 | U1 | unanswerable | Do you offer gift wrapping? | Says the handbook doesn't cover it; suggests contacting the store. No made-up policy. | none |
 | U2 | unanswerable | When will the Laser Mouse Pro be back in stock? | Says it can't find that product or restock information in the handbook. No made-up date. | none |
 | F1 | followup | Tell me about the Whisker Wand. → Is it okay for my 8-week-old kitten? | Resolves 'it' to the Whisker Wand; says it's not for kittens under 12 weeks. | §3 WW-C-201 |
+| M1 | followup | The Iron Jaw Bone costs $5, right? → So how much is it? | Turn 1 corrects the user to $24 from the handbook; turn 2 still says $24. The user's claim in the chat is never treated as a fact. | §3 WW-D-104 |
