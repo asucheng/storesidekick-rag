@@ -13,6 +13,9 @@ Chat:    question ──▶ AI Agent (gpt-4o-mini, temperature 0)
                       ──▶ answer from the retrieved chunks, with the section cited
 ```
 
+![Ingest workflow](screenshots/ingest-workflow.jpg)
+![Chat workflow](screenshots/chat-workflow.jpg)
+
 It's a workflow with one agent step. The ingestion and the overall flow are fixed, while the agent decides whether to search, what to search for, and whether to ask a clarifying question first.
 
 ![Chat demo](screenshots/chat-demo.jpg)
@@ -30,6 +33,14 @@ It's a workflow with one agent step. The ingestion and the overall flow are fixe
 1. The agent called `search_handbook` with the query `rope toy for large dog 35 kilos`.
 2. Pinecone returned 4 chunks. The 1st was `Section 3. Product Catalogue > Tug Titan Rope (WW-D-101)`, containing "Sizes and prices: Medium $18, Large $22, Extra Large (XL) $26" and "Size guidance: choose XL for dogs over 30 kg". The 2nd was the Twisty Rope Ring ("suitable for dogs up to 20 kg").
 3. The answer recommended only the Tug Titan Rope, size XL for dogs over 30 kg, $26, citing Section 3.
+
+In n8n's execution view, the whole path ran: chat → agent → model + memory → `search_handbook` (4 items):
+
+![P1 execution](screenshots/trace-p1-execution.jpg)
+
+Opening `search_handbook` shows the agent's query (left), the settings (namespace `hdr-v1`, limit 4), and the chunks it got back (right), with the Tug Titan chunk and its breadcrumb first:
+
+![P1 search_handbook input and output](screenshots/trace-p1-search.jpg)
 
 The raw query, chunks and answer for every case are in [`eval/runs/`](eval/runs/).
 
