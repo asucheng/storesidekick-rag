@@ -1,0 +1,38 @@
+[
+  {
+    "id": "P5",
+    "type": "paraphrase",
+    "question": "Which of your balls will float in a lake?",
+    "answer": "The Bounce Buddy Ball (WW-D-103) is a hollow natural-rubber ball that floats, making it a favorite for lakes, pools, and beach days. It comes in sizes Small, Medium, and Large, and is priced at $9. (Source: Section 3)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "floating balls"
+      }
+    ],
+    "retrieved": [
+      "Section 3. Product Catalogue > Bounce Buddy Ball (WW-D-103)\nA hollow natural-rubber ball with an unpredictable bounce that keeps dogs chasing. It floats,\nso it's a favourite for lakes, pools and beach days.\n• Materials: natural rubber\n• Sizes: Small, Medium, Large\n• Price: $9\n• Chew rating: 3 Strong\n• Size guidance: match the ball size to your dog's mouth; the ball should be too large to\nfit fully inside the mouth",
+      "Section 3. Product Catalogue > Hay Ball Feeder (WW-S-307)\nA hanging stainless wire ball that holds hay off the floor, keeping it clean and making\nmealtimes more active.\n• Materials: stainless wire\n• Size: one size\n• Price: $11",
+      "Section 3. Product Catalogue > Willow Chew Ball (WW-S-302)\nHand-woven willow balls that small pets can roll, toss and chew to help keep teeth healthy.\n• Materials: willow\n• Size: pack of 2\n• Price: $6",
+      "Section 3. Product Catalogue > Track Tower (WW-C-203)\nA three-level wooden tower with a ball in each track. Cats bat the balls around the rings for\nindependent play.\n• Materials: wood, three ball tracks\n• Size: one size\n• Price: $25"
+    ]
+  },
+  {
+    "id": "A2",
+    "type": "ambiguous",
+    "question": "Is it machine washable?",
+    "answer": "The Snuffle Mat Meadow (WW-D-105) is hand wash only and should be air dried. Other products like the Scratch & Snooze Lounger (WW-C-206) and Felted Mouse Trio (WW-C-204) do not specify washing instructions in the handbook. \n\nIf you need more specific information about a particular product, please let me know! (Source: Section 3)",
+    "tool_called": true,
+    "tool_queries": [
+      {
+        "input": "machine washable"
+      }
+    ],
+    "retrieved": [
+      "Section 3. Product Catalogue > Scratch & Snooze Lounger (WW-C-206)\nA curved scratcher made from recycled cardboard that doubles as a lounger. Flip it over\nwhen one side wears down.\n• Materials: recycled cardboard\n• Size: one size\n• Price: $34\n• Reversible",
+      "Section 3. Product Catalogue > Snuffle Mat Meadow (WW-D-105)\nAn enrichment mat with strips of soft felt that look like a small meadow. Scatter kibble or\ntreats into the strips and let your dog sniff them out. Great for slowing down fast eaters and\nfor rainy days indoors.\n• Materials: felt on a non-slip base\n• Size: one size\n• Price: $32\n• Chew rating: 1 Gentle\n• Care: hand wash and air dry",
+      "Section 2. Safety Standards\nSafety is the reason Wag & Whisker exists, so we hold every product to the same rules before\nit reaches our catalogue.\nMaterials policy\nWe build our toys from a short list of materials: natural rubber, food-grade silicone, organic\ncotton and felted wool, plus untreated natural woods and grasses for our small-pet range. We\ndo not use BPA, phthalates or latex fillers in any product. Dyes, where we use them, are\nwater-based and colour-fast. If a material isn't on our approved list, it doesn't go into a Wag\n& Whisker toy.\nIndependent testing\nEvery design is independently tested to ASTM F963 before it goes on sale. Testing covers\nsmall parts, sharp edges, seam strength and the materials themselves. When we change a\ndesign, even slightly, it is tested again.\nChew ratings explained\nEvery dog toy carries a chew rating from 1 to 4 so you can match the toy to how your dog\nplays:\n• 1 Gentle: for licking, carrying and soft mouthing. Ideal for older dogs, gentle players\nand enrichment toys.",
+      "Section 3. Product Catalogue > Felted Mouse Trio (WW-C-204)\nThree hand-felted wool mice, small enough to bat across the floor and soft enough to carry.\n• Materials: felted wool\n• Size: pack of 3\n• Price: $11\n• Catnip-free"
+    ]
+  }
+]
