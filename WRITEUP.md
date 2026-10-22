@@ -54,7 +54,9 @@ In my runs there were **no retrieval failures**. The right chunk was always in t
 
 | Case | What went wrong | Type | Fixed by |
 | --- | --- | --- | --- |
-| P1 (run 1) | Retrieved the Tug Titan's facts, but the answer left out "XL" and added a non-rope toy | generation | partly by chunking, fully by prompt |
+| P1 (run 1) | Retrieved the Tug Titan's facts, but the answer left out "XL" and added a non-rope toy | generation | missing XL fixed by chunking; extra product fixed by prompt |
+| P1 (run 3) | Right toy and size, but added "should hold up well for your dog", which the handbook doesn't support | generation (unsupported claim), **high severity** | not yet fixed |
+| M1 (final config) | Corrected the user's false "$5" price to $24, but also suggested an unrelated $5 small-pet toy | generation (off-question suggestion), **low severity** | not yet fixed |
 | F1, P3 (run 1) | Correct facts, wrong section cited (e.g. "Section 6" for a product in Section 3) | generation (attribution) | chunking |
 | A1 (runs 1–2) | "How long does it take?" was narrowed to shipping before searching, instead of asking | agent | prompt |
 
@@ -66,7 +68,7 @@ In my runs there were **no retrieval failures**. The right chunk was always in t
   - Rule 5: if it's unclear what the user means, ask before searching.
   - Rule 7: only recommend products that match what was asked.
 
-  I added two held-out questions *before* this change to check it generalizes. **Result: 13/13**, with no regressions.
+  I added two held-out questions *before* this change to check it generalizes. **Result: 12/13.** P1 now names the right toy and size with no other products, but it adds "should hold up well for your dog", a durability promise the handbook doesn't make (the dog "shreds everything", the toy is rated 3 Strong, and the handbook says no toy is indestructible). I graded that a fail: any claim not backed by the handbook breaks the grounding rule.
 
 Full tables: [`eval/results.md`](eval/results.md).
 
@@ -75,12 +77,13 @@ Full tables: [`eval/results.md`](eval/results.md).
 ## 6. Memory vs document knowledge
 
 - **Follow-up (F1):** after "Tell me about the Whisker Wand", the bot understood "Is it okay for my 8-week-old kitten?" as being about the Whisker Wand. It answered "not for kittens under 12 weeks" (Section 3).
-- **Memory trap (smoke test):** the user claimed "The Iron Jaw Bone costs $5, right?". The bot searched the handbook and corrected it to **$24** instead of trusting the chat.
+- **Memory trap (case M1, final config):** the user claimed "The Iron Jaw Bone costs $5, right?". The bot searched the handbook and corrected it to **$24**, and on the follow-up "So how much is it?" it still said $24. The false claim in memory never became a "fact".
 - Memory is a window of the last 5 exchanges per chat session. The system prompt says history is only for working out what the user refers to, and never counts as a fact about the store.
 
 ## 7. Limitations
 
-- **Small evaluation:** 13 cases, each run once. 13/13 shows the bot handles these questions, not that it's reliable in general.
+- **Small evaluation:** 13 cases, each run once. 12/13 shows how the bot handles these questions, not that it's reliable in general.
+- **Prompt rules reduce mistakes; they don't eliminate them.** Rule 7 stopped the off-question product in P1, yet M1 still volunteered an unrelated product. Getting closer to "never" needs a check in code after the model answers (e.g. compare every product named in the answer with what was asked, and block mismatches), plus a rule against promises the handbook doesn't make (P1's "should hold up well").
 - **Follow-ups often don't re-search.** The bot reuses its previous answer, so an error in one turn can carry into the next.
 - **One clean document:** the heading-aware splitting depends on this handbook's format.
 - **Local only:** after a restart, n8n briefly served the previous workflow version, which affected the first attempt at three run 2 cases (re-run and noted).

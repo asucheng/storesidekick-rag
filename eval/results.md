@@ -3,6 +3,7 @@
 Cases and expected answers: [`questions.md`](questions.md). Raw answers and retrieved chunks: [`runs/`](runs/).
 
 - **Retrieval OK:** a chunk containing the expected fact was among the chunks returned by `search_handbook`.
+- **Pass/fail** is judged against the rules and expected answer, so the same kind of mistake always gets the same grade. **Severity** (high / low) is recorded separately for failures: how much harm the mistake could cause a customer. It decides what to fix first, not whether something counts as a failure.
 - **Error type:** *retrieval* means the right chunk wasn't returned. *Generation* means it was returned but the answer or citation was wrong. *Agent* means the model's own decision (what to search, whether to clarify) caused the problem.
 
 ## Run 1 — `c800-o150` (chunk 800, overlap 150, top k 4) — 2026-10-21
@@ -93,7 +94,7 @@ Both are deliberately left for a separate change, so this comparison measures on
 | D1 | direct | Y | Y | Y | n.a. | n.a. | |
 | D2 | direct | Y | Y | Y | n.a. | n.a. | |
 | D3 | direct | Y | Y | Y | n.a. | n.a. | |
-| P1 | paraphrase | Y | **Y** (was N) | Y | n.a. | n.a. | Only the Tug Titan Rope: XL for dogs over 30 kg, $26. No other product types. |
+| P1 | paraphrase | Y | **N** | Y | n.a. | n.a. | Fixed what failed before: only the Tug Titan Rope, XL for dogs over 30 kg, $26, no other product types. **New failure (generation, unsupported claim; severity high: the customer gets a false expectation of the product):** it ends "This toy is designed for strong chewers and should hold up well for your dog." The dog "shreds everything", which is the handbook's rating-4 description ("dogs that destroy most toys"). The Tug Titan is rated 3, and the handbook says "No toy is indestructible". The reassurance is invented. |
 | P2 | paraphrase | Y | Y | Y | n.a. | n.a. | |
 | P3 | paraphrase | Y | Y | Y | n.a. | n.a. | |
 | P4 | paraphrase | Y | Y | Y | n.a. | n.a. | |
@@ -104,21 +105,21 @@ Both are deliberately left for a separate change, so this comparison measures on
 | U2 | unanswerable | n.a. | Y | n.a. | refused | n.a. | |
 | F1 | follow-up | n.a. | Y | Y | n.a. | Y | **No over-triggering:** "it" refers to the earlier message, so the bot answered directly instead of asking. |
 
-**Score:** 13/13 answers correct; all citations correct; no regressions.
+**Score:** 12/13 answers correct; all citations correct. P1's earlier failure (missing XL, off-question product) is fixed, but the answer adds an unsupported durability promise.
 
 ## Summary across runs
 
 | | Run 1 | Run 2 (retrieval fix) | Run 3 (prompt fix) |
 | --- | --- | --- | --- |
 | Change | baseline, chunk 800 / overlap 150 | heading-aware chunks | stricter ambiguity rule + "recommend only what was asked" |
-| Answers correct (original 11 cases) | 9 / 11 | 9 / 11 | **11 / 11** |
+| Answers correct (original 11 cases) | 9 / 11 | 9 / 11 | **10 / 11** |
 | Citations correct | 7 / 9 | 9 / 9 | 9 / 9 |
 | Held-out cases (P5, A2) | — | 1 / 2 (baseline) | **2 / 2** |
 
-Each change fixed the kind of error it targeted. The **retrieval** change fixed attribution: wrong citations, and facts separated from their product. The **prompt** change fixed the **generation** error (an off-question product suggestion) and the **agent** error (guessing what a vague question meant). Neither change could have fixed the other's errors.
+Each change fixed the kind of error it targeted, and one generation weakness remains: P1 now answers the question correctly but adds a reassurance ("should hold up well") that the handbook doesn't support. The next fix would be a prompt rule against promises or judgements beyond what the handbook states, re-tested the same way. The **retrieval** change fixed attribution: wrong citations, and facts separated from their product. The **prompt** change fixed the **generation** error (an off-question product suggestion) and the **agent** error (guessing what a vague question meant). Neither change could have fixed the other's errors.
 
 **Limits of this evidence:**
-- Each case was run once (temperature 0), and the set is small (13 cases), so 13/13 shows the rules work on these questions, not that the bot is reliable in general.
+- Each case was run once (temperature 0), and the set is small (13 cases), so 12/13 shows how the bot handles these questions, not that it's reliable in general.
 - The two held-out cases are the main guard against tuning to the test. A larger held-out set would be the next step.
 
 ## Memory evidence on the final config (`hdr-v1` + prompt v2)
@@ -128,8 +129,8 @@ Recorded after the final review, with the runner now saving every turn: [`runs/h
 | ID | Turn 1 | Turn 2 | Memory OK | Notes |
 | --- | --- | --- | --- | --- |
 | F1 | "Tell me about the Whisker Wand." → searched, retrieved `Section 3 > Whisker Wand (WW-C-201)`, listed "not suitable for kittens under 12 weeks" | "Is it okay for my 8-week-old kitten?" → no new search; "not suitable for kittens under 12 weeks… wait until they are older" (Section 3) | Y | "It" resolved from history. The turn-2 fact comes from the handbook chunk retrieved in turn 1. |
-| M1 | "The Iron Jaw Bone costs $5, right?" → searched, retrieved `Section 3 > Iron Jaw Bone`, **"actually costs $24"** | "So how much is it?" → no new search; **"$24"** (Section 3) | Y | The user's false claim was never treated as a store fact. Turn 1 also volunteered an unasked suggestion ("the Apple Stick Bundle, which is priced at $5"). This is the same kind of off-question product suggestion as P1 in runs 1–2; **grading pending**. |
+| M1 | "The Iron Jaw Bone costs $5, right?" → searched, retrieved `Section 3 > Iron Jaw Bone`, **"actually costs $24"** | "So how much is it?" → no new search; **"$24"** (Section 3) | Y | The user's false claim was never treated as a store fact. Turn 1 also volunteered an unasked suggestion ("the Apple Stick Bundle, which is priced at $5"). This is the same kind of off-question product suggestion as P1 in runs 1–2: **answer fail (generation), severity low**. It's odd and irrelevant (a small-pet chew offered for a dog-toy price question), but it doesn't mislead the customer about anything they're buying. |
 
-**Open grading questions:**
-- **M1:** should the unasked Apple Stick Bundle suggestion count as a generation failure (as P1 did)?
-- **P1 (run 3):** besides naming the Tug Titan XL, the answer adds "This toy is designed for strong chewers and should hold up well for your dog." The handbook rates the Tug Titan 3 Strong, reserves "dogs that destroy most toys" for rating 4, and says "No toy is indestructible", so "should hold up well" is an unsupported claim. Pass, or pass with a residual issue?
+**Final config, all 14 cases:** 12/14 answers correct. Memory behaviour correct in both multi-turn cases. Remaining failures, by severity:
+- **P1 (high):** invented durability promise. This is the next fix: a prompt rule against claims beyond the handbook, and possibly a code check.
+- **M1 (low):** unasked product suggestion. A prompt rule only reduces this; a reliable fix needs a code check that compares recommended products with what was asked.
