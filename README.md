@@ -3,8 +3,10 @@
 Stage 2 of the AI Engineer Residency: an n8n chatbot that answers questions about a fictional pet-toy store **only from its handbook**, using retrieval (RAG). It refuses when the handbook doesn't cover something and asks when a question is too vague.
 
 - **Write-up:** [`WRITEUP.md`](WRITEUP.md) (chunking choice, a traced answer, retrieval vs generation errors, what changed)
-- **Evaluation:** [`eval/results.md`](eval/results.md): 3 runs, 13 cases (answers 9/11 → 9/11 → 12/13; citations 7/9 → 9/9)
+- **Evaluation:** [`eval/results.md`](eval/results.md): 4 runs, 14 cases (answers 9/11 → 9/11 → 12/14 → 13/14 with a P1 regression; citations 7/9 → 9/9)
 - **Demo:** [`screenshots/`](screenshots/)
+
+> **Status: learning project, not ready for real shoppers.** One known high-severity failure remains (P1). For a heavy chewer, the bot either adds a durability promise the handbook doesn't make, or recommends a product of a different type. Prompt rules reduce such mistakes but don't eliminate them. The next step is a code check that compares each recommended product's type and limits with the request before answering. See [`eval/results.md`](eval/results.md) (runs 3–4).
 
 Wag & Whisker, its products and its policies are invented.
 
